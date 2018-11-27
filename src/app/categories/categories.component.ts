@@ -10,15 +10,19 @@ import { NavigationService } from '../navigation/navigation.service';
 export class CategoriesComponent implements OnInit, OnDestroy {
     isnavOpen: boolean = false;
     navSubscription: Subscription;
+    selectedIndex: number = null;
+    filteredCategories:string = '';
 
     categories = [
         {   
+            id: 1,
             image: 'M',
             name: 'Miscellaneous',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed',
             projects: 6
         },
         {   
+            id: 2,
             image: 'L',
             name: 'LearnDash Development',
             description: '',

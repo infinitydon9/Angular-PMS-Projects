@@ -8,11 +8,15 @@
     </div>
     <div class="row m-0">
         <div class="col-lg-5 col-sm-12 categories-section">
-            <div class="form-group">
-                <input type="text" class="form-control">
+            <div class="form-group search">
+                <input type="text"
+                class="form-control tshadow"
+                placeholder="&#61442;&nbsp;&nbsp;&nbsp;Search"
+                [(ngModel)] = "filteredCategories"
+                >
             </div>
-            <div class="categories-list" *ngFor="let category of categories">
-                <a href="#" class="single-category">
+            <div class="categories-list" *ngFor="let category of categories | filter:filteredCategories:'name'">
+                <a style="cursor:pointer" [routerLink] = "[category.id]" routerLinkActive="bg-primary active" class="single-category">
                     <div class="avatar-image">
                         <span>{{ category.image }}</span>
                     </div>
@@ -26,6 +30,8 @@
                 </a>
             </div>
         </div>
-        <div class="col-lg-7 col-sm-0"></div>
+        <div class="col-lg-7 col-sm-0 categories-detail-section">
+            <router-outlet></router-outlet>
+        </div>
     </div>
 </section>
