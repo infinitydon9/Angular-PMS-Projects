@@ -1,0 +1,35 @@
+.navbar {
+    background: white;
+    padding: 0;
+}
+.navbar .navbar-brand {
+    width: 260px;
+    padding: 0px 20px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.1rem;
+    color: #41555f;
+    margin: 0;
+}
+.navbar .toggle-nav {
+    opacity: 0;
+    height: 72px;
+    padding: 0px 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0px 5px;
+}
+
+@media screen and (max-width: 480px) {
+    .navbar .navbar-brand {
+        text-align: left;
+    }
+}
+@media screen and (max-width: 1023px) {
+    .navbar .toggle-nav {
+        opacity: 1;
+        display: flex !important;
+    }
+}

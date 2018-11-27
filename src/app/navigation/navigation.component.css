@@ -1,0 +1,151 @@
+#navigation {
+    width: 260px;
+    background-color: white;
+    position: fixed;
+    top: 72px;
+    bottom: 0;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.05);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    transition: all 200ms ease-in;
+}
+#navigation div.top-section div.profile {
+    padding: 20px;
+    text-align: center;
+}
+#navigation div.top-section div.profile div.profile-pic-box {
+    position: relative;
+    display: inline-block;
+}
+#navigation div.top-section div.profile div.profile-pic-box img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+#navigation div.top-section div.profile div.profile-pic-box span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+#navigation div.top-section div.profile div.profile-pic-box span .fa {
+    color: gray;
+}
+#navigation div.top-section div.profile p {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: gray;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    padding: 15px 0px;
+}
+#navigation div.top-section ul.side-bar {
+    padding: 20px 0px;
+    list-style-type: none;
+}
+#navigation div.top-section ul.side-bar a.side-bar-menu-item {
+    text-decoration: none;
+    color: gray;
+    padding: 20px 40px;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    transition: all 250ms ease-in-out;
+}
+#navigation div.top-section ul.side-bar a.side-bar-menu-item .fa {
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+#navigation div.top-section ul.side-bar a.side-bar-menu-item.active, #navigation div.top-section ul.side-bar a.side-bar-menu-item:hover {
+    color: black;
+    padding: 20px 40px 20px 35px;
+    border-left: 5px solid #ff8333;
+    background-image: linear-gradient(to right, #ff83332e, white);
+}
+#navigation div.bottom-section {
+    padding-bottom: 50px;
+}
+#navigation div.bottom-section hr {
+    width: 20%;
+    margin-left: 40px;
+}
+#navigation div.bottom-section h4 {
+    padding: 10px 40px;
+    font-size: 0.9rem;
+}
+#navigation div.bottom-section p {
+    padding: 10px 40px;
+    font-size: 0.9rem;
+    font-size: 0.75rem;
+    color: gray;
+}
+#navigation div.bottom-section a {
+    display: inline;
+    padding: 10px 0px;
+    margin-left: 40px;
+    text-decoration: none;
+}
+#navigation:hover {
+    overflow-y: auto;
+}
+#navigation:hover::-webkit-scrollbar {
+    width: 4px;
+    background-color: #F5F5F5;
+}
+#navigation:hover::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1);
+    background-color: #555;
+}
+
+@media screen and (max-width: 480px) {
+    #navigation {
+        overflow-y: scroll;
+    }
+    #navigation::-webkit-scrollbar {
+        width: 4px;
+        background-color: white;
+    }
+    #navigation::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1);
+        background-color: #555;
+    }
+}
+@media screen and (max-width: 1023px) {
+    #navigation {
+        transform: translateX(-260px);
+        z-index: 2;
+        transition: all 350ms ease-in-out;
+    }
+    #navigation.nav-open {
+        transform: translateX(0px);
+    }
+    
+    #main-content {
+        margin-left: 0 !important;
+        transition: all 250ms ease-in-out;
+    }
+}
