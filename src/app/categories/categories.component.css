@@ -113,16 +113,6 @@
     margin: 5px 0px;
 }
 
-#categories-content .categories-section .search input {
-    padding: 30px 20px;
-    border: 0;
-    font-family: "FontAwesome", "Lato", Verdana, sans-serif;
-}
-
-#categories-content .categories-section .search input::placeholder {
-    color: grey;
-}
-
 @media screen and (max-width: 767px) {
     #categories-content .page-title-section .page-title {
         flex-direction: column;
@@ -144,8 +134,8 @@
 }
 
 #categories-content .categories-detail-section {
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column; */
 }

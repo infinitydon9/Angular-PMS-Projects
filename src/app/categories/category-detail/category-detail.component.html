@@ -1,4 +1,27 @@
-<div class="empty-projects d-flex flex-column align-items-center justify-content-center">
-    <span><i class="fa fa-folder-open" aria-hidden="true"></i></span>
-    <p>No projects available.</p>
+<div *ngIf = "projects.length == 0" 
+class="empty-projects d-flex flex-column align-items-center justify-content-center">
+<span><i class="fa fa-folder-open" aria-hidden="true"></i></span>
+<p>No projects available.</p>
+</div>
+
+<div class="form-group search px-3">
+    <input type="text"
+    class="form-control"
+    placeholder="&#61442;&nbsp;&nbsp;&nbsp;Search"
+    [(ngModel)] = "filteredProjects"
+    >
+</div>
+<div class="container row m-0 p-0">
+    <div class="col-md-6 p-3 project"
+    *ngFor = "let project of projects | filter:filteredProjects:'name'">
+    <div class="card card-body">
+        <h4 class="card-title">{{ project.name }}</h4>
+        <p class="card-text client">{{ project.client }}</p>
+        <p class="card-text description">{{ project.description }}</p>
+        <div class="imagebox"
+        *ngFor = "let developer of project.developers">
+        <img [src]="developer.imageurl" alt="" title="{{ developer.name }}">
+    </div>
+</div>
+</div>
 </div>

@@ -10,8 +10,6 @@ import { NavigationService } from '../navigation/navigation.service';
 export class CategoriesComponent implements OnInit, OnDestroy {
     isnavOpen: boolean = false;
     navSubscription: Subscription;
-    selectedIndex: number = null;
-    filteredCategories:string = '';
 
     categories = [
         {   

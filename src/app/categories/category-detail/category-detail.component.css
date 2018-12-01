@@ -4,3 +4,47 @@
 .empty-projects .fa {
     font-size: 6rem;
 }
+
+.search input {
+    padding: 30px 20px;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+    border-radius: 0;
+    border-bottom: 2px solid lightgrey;
+    font-family: "FontAwesome", "Lato", Verdana, sans-serif;
+}
+
+.search input:focus {
+    background: white;
+    border-bottom-color: #007bff;
+}
+
+.search input::placeholder {
+    color: grey;
+}
+
+.project .card {
+    border-radius: 10px;
+    border: 0;
+    box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project .card .card-title {
+    margin-bottom: .75rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.project .card .client {
+    font-weight: bold;
+    font-size: 0.90rem;
+}
+
+.project .card .description {
+    font-size: 0.85rem;
+    color: grey;
+}
