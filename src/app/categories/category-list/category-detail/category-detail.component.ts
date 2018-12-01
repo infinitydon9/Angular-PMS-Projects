@@ -1,4 +1,4 @@
-import { CategoryService } from './../category.service';
+import { CategoryService } from './../../category.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 

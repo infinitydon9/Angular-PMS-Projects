@@ -6,25 +6,5 @@
             <a href="" class="btn btn-primary tbtn"><span><i class="fa fa-plus" aria-hidden="true"></i></span>Add new category</a>
         </div>
     </div>
-    <div class="row m-0">
-        <div class="col-lg-5 col-sm-12 categories-section">
-            <div class="categories-list" *ngFor="let category of categories">
-                <a style="cursor:pointer" [routerLink] = "[category.id]" routerLinkActive="bg-primary active" class="single-category">
-                    <div class="avatar-image">
-                        <span>{{ category.image }}</span>
-                    </div>
-                    <div class="category-details">
-                        <div class="title">
-                            <h5>{{ category.name }}</h5>
-                            <span class="badge badge-primary badge-pill">{{ category.projects }}</span>
-                        </div>
-                        <small class="description" *ngIf="category.description !== ''">{{ category.description }}</small>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-lg-7 col-sm-0 categories-detail-section">
-            <router-outlet></router-outlet>
-        </div>
-    </div>
+    <router-outlet></router-outlet>
 </section>

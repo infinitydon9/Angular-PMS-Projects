@@ -1,0 +1,89 @@
+.row {
+    padding: 20px 50px;
+    width: 100%;
+}
+
+.row .categories-section {
+    padding-left: 0;
+}
+.categories-section a {
+    background: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: flex;
+    margin-bottom: 10px;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.categories-section a.active {
+    color: white;
+}
+
+.categories-section a.active span.badge {
+    box-sizing: border-box;
+    border: 2px solid white;
+}
+
+.categories-section a .avatar-image {
+    display: flex;
+}
+.categories-section a .avatar-image span {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background: blue;
+}
+.categories-section a .category-details {
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    min-width: 0;
+}
+.categories-section a .category-details .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.categories-section a .category-details .title h5 {
+    margin: 0;
+    font-size: 0.90rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.categories-section a .category-details .title span {
+    margin-left: 5px;
+}
+.categories-section a .category-details small {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 5px 0px;
+}
+
+@media screen and (max-width: 767px) {
+    .row {
+        padding: 20px !important;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .row .categories-section {
+        padding: 0 !important;
+    }
+    .row .categories-detail-section {
+        padding: 0 !important;
+    }
+}

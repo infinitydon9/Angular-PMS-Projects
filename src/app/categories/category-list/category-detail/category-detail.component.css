@@ -48,3 +48,27 @@
     font-size: 0.85rem;
     color: grey;
 }
+
+@media screen and (max-width: 992px) {
+    .search {
+        padding: 0 !important;
+    }
+    .row .categories-section {
+        padding: 0 !important;
+    }
+    .row .categories-detail-section {
+        padding: 0 !important;
+    }
+    .row .project:nth-child(2n+1) {
+        padding-left: 0 !important;
+    }
+    .row .project:nth-child(2n) {
+        padding-right: 0 !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .row .project{
+        padding: 0 !important;
+    }
+}

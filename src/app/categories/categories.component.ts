@@ -11,23 +11,6 @@ export class CategoriesComponent implements OnInit, OnDestroy {
     isnavOpen: boolean = false;
     navSubscription: Subscription;
 
-    categories = [
-        {   
-            id: 1,
-            image: 'M',
-            name: 'Miscellaneous',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed',
-            projects: 6
-        },
-        {   
-            id: 2,
-            image: 'L',
-            name: 'LearnDash Development',
-            description: '',
-            projects: 5
-        }
-    ];
-
     constructor(private navigationService: NavigationService) { }
     
     ngOnInit() {
