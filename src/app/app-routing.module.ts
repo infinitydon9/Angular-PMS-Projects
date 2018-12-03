@@ -7,7 +7,7 @@ import { CategoryListComponent } from './categories/category-list/category-list.
 const appRoutes: Routes = [
     { path: 'categories', component: CategoriesComponent, children: [
             { path: '', redirectTo: '/categories/1', pathMatch: 'full'},
-            { path: 'add', component: CategoryEditComponent },
+            { path: 'new', component: CategoryEditComponent },
             { path: ':id', component: CategoryListComponent }
         ]
     }

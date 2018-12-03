@@ -3,7 +3,16 @@
     <div class="row m-0 page-title-section">
         <div class="col-md-12 page-title">
             <h2>Project Categories</h2>
-            <a href="" class="btn btn-primary tbtn"><span><i class="fa fa-plus" aria-hidden="true"></i></span>Add new category</a>
+            <a style="cursor:pointer" 
+                routerLink = "/categories/new"
+                routerLinkActive = "hidden" 
+                class="btn btn-primary tbtn addcategory">
+                <span><i class="fa fa-plus" aria-hidden="true"></i></span>Add new category</a>
+            <a style="cursor:pointer"
+                *ngIf="router.url == '/categories/new'"
+                routerLink = "/categories"
+                class="btn btn-primary tbtn backtocategory">
+                Back to categories</a>
         </div>
     </div>
     <router-outlet></router-outlet>

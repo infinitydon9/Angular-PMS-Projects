@@ -1,6 +1,7 @@
 import { Subscription } from 'rxjs';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NavigationService } from '../navigation/navigation.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-categories',
@@ -11,7 +12,7 @@ export class CategoriesComponent implements OnInit, OnDestroy {
     isnavOpen: boolean = false;
     navSubscription: Subscription;
 
-    constructor(private navigationService: NavigationService) { }
+    constructor(private router: Router, private navigationService: NavigationService) { }
     
     ngOnInit() {
         this.navigationService.navigationChanged.subscribe(

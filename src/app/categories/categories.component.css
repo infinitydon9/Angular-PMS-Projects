@@ -44,6 +44,10 @@
     color: slategray;
 }
 
+#categories-content .page-title-section .page-title .addcategory.hidden {
+    display: none;
+}
+
 @media screen and (max-width: 767px) {
     #categories-content .page-title-section .page-title {
         flex-direction: column;
