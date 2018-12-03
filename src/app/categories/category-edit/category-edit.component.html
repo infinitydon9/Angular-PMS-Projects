@@ -1,3 +1,61 @@
-<p>
-  category-edit works!
-</p>
+<div class="row m-0 newcategory-section">
+    <div class="col-md-12 newcategory-section-content p-0">
+        <form (ngSubmit) = "onSubmit(form)" #form="ngForm">
+            <div class="row m-0 mb-5">
+                <div class="col p-0">
+                    <label for="parentCategory">Parent Category</label>
+                    <select
+                        class="form-control"
+                        id="parentCategory"
+                        [ngModel]="defaultParent"
+                        name="parentCategory"
+                        required>
+                        <option value="1">Top</option>
+                        <option value="2">Miscellaneous</option>
+                        <option value="3">LearnDash Development</option>
+                    </select>
+                </div>
+                <div class="col d-flex align-items-center ml-5 notes tshadow">
+                    <p class="m-0 px-2">You can also create <strong class="text-primary">child categories</strong> to organise the projects in more precise and detailed way.</p>
+                </div>
+            </div>
+            <div class="form-group mb-5">
+                <label for="categoryTitle">Category Title</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="categoryTitle"
+                    name="categoryTitle" 
+                    placeholder="What is this category ?"
+                    ngModel
+                    required
+                    #categorytitle = "ngModel"
+                    [ngClass]="[categorytitle.touched && !categorytitle.valid ? 'is-invalid' : '', categorytitle.touched && categorytitle.valid ? 'is-valid' : '' ]"
+                    >
+                <div class="invalid-feedback"
+                    *ngIf = "categorytitle.touched && !categorytitle.valid">
+                    Please enter a title for category.
+                </div>
+                <div class="valid-feedback"
+                *ngIf = "categorytitle.touched && categorytitle.valid">
+                    Looks good!
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="categoryDescription">Category Description</label>
+                <textarea
+                    class="form-control"
+                    id="categoryDescription"
+                    name="categoryDescription"
+                    placeholder="Type category description here"
+                    rows="10"
+                    ngModel></textarea>
+            </div>
+            <button 
+                type="submit"
+                class="btn btn-primary tbtn"
+                [disabled]="!form.valid">Create Category</button>
+            <button class="btn btn-secondary tbtn ml-3">Cancel</button>
+        </form>
+    </div>
+</div>
