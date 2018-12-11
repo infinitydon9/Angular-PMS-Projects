@@ -12,6 +12,8 @@ import { HeaderComponent } from './header/header.component';
 import { FilterPipe } from './shared/filter.pipe';
 import { CategoryListComponent } from './categories/category-list/category-list.component';
 import { CategoryDetailComponent } from './categories/category-list/category-detail/category-detail.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ProjectsListComponent } from './projects/projects-list/projects-list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { CategoryDetailComponent } from './categories/category-list/category-det
     NavigationComponent,
     HeaderComponent,
     FilterPipe,
-    CategoryListComponent
+    CategoryListComponent,
+    ProjectsComponent,
+    ProjectsListComponent
   ],
   imports: [
     BrowserModule,

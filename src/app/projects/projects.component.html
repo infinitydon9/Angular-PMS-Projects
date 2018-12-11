@@ -1,0 +1,12 @@
+<section id="projects-content" class="main-content">
+    <div class="overlay" [ngClass]="isnavOpen ? 'show' : ''"></div>
+    <div class="row m-0 page-title-section">
+        <div class="col-md-12 page-title">
+            <h2>Projects</h2>
+            <a style="cursor:pointer" 
+                class="btn btn-primary tbtn addcategory text-white">
+                <span><i class="fa fa-plus" aria-hidden="true"></i></span>Add new project</a>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</section>
