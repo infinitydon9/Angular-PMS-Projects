@@ -1,0 +1,33 @@
+.row {
+    padding: 10px 50px;
+    width: 100%;
+}
+
+ul.nav.nav-tabs {
+    box-shadow: 0px 1px 1px rgba(0, 0 ,0 , 0.05);
+}
+
+a.nav-link {
+    padding: 15px 20px;
+    box-sizing: border-box;
+    border: 0;
+    color: gray;
+    text-transform: uppercase;
+    font-size: .75rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+}
+
+a.nav-link span.badge {
+    font-size: .75rem;
+}
+
+a.nav-link.active {
+    border:0;
+    color: #007bff;
+    border-bottom: 5px solid #007bff;
+}
+
+a.nav-link:not(.active):hover {
+    border: 0;
+}

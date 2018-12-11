@@ -1,3 +1,34 @@
-<p>
-  projects-list works!
-</p>
+<div class="row m-0">
+    <div class="col-md-12 p-0">
+        <ul class="nav nav-tabs bg-white justify-content-center border-0 mb-3" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">All&nbsp;&nbsp;<span class="badge badge-primary badge-pill">14</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" id="current-tab" data-toggle="tab" href="#current" role="tab" aria-controls="current" aria-selected="false">Current&nbsp;&nbsp;<span class="badge badge-primary badge-pill">5</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pending-tab" data-toggle="tab" href="#pending" role="tab" aria-controls="pending" aria-selected="false">Pending&nbsp;&nbsp;<span class="badge badge-primary badge-pill">3</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="completed-tab" data-toggle="tab" href="#completed" role="tab" aria-controls="completed" aria-selected="false">Completed&nbsp;&nbsp;<span class="badge badge-primary badge-pill">6</span></a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="all-tab">...</div>
+            <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="current-tab">
+                <div class="row m-0 p-0">
+                    <div class="col-md-4">
+                        <div class="card card-body mb-4">
+                            <h4 class="card-title">Test</h4>
+                            <p class="card-text client">Test</p>
+                            <p class="card-text description">Test</p>
+                        </div>
+                    </div> 
+                </div> 
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="pending-tab">...</div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="completed-tab">...</div>
+        </div>
+    </div>
+</div>

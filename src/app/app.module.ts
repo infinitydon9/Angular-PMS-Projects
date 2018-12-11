@@ -1,3 +1,4 @@
+import { ProjectserverService } from './projects/projectserver.service';
 import { AppRoutingModule } from './app-routing.module';
 import { NavigationService } from './navigation/navigation.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,6 +15,7 @@ import { CategoryListComponent } from './categories/category-list/category-list.
 import { CategoryDetailComponent } from './categories/category-list/category-detail/category-detail.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectsListComponent } from './projects/projects-list/projects-list.component';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -31,9 +33,10 @@ import { ProjectsListComponent } from './projects/projects-list/projects-list.co
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     AppRoutingModule
   ],
-  providers: [NavigationService],
+  providers: [NavigationService, ProjectserverService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
